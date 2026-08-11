@@ -1,1 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
+        <version>1.0.0</version>
 
+        <addition>
+            <item>Added full Joomla 6 DevArt Polls package with component com_devartpolls and site module mod_devartpoll</item>
+            <item>Added Poll mode for one anonymous question with aggregate counters</item>
+            <item>Added Survey mode for multiple questions, stored responses, response manager and CSV export</item>
+            <item>Added single choice and multiple choice question types</item>
+            <item>Added configurable duplicate protection modes including cookie, cookie+IP and cookie+IP+User-Agent</item>
+            <item>Added optional bot protection with Joomla Proof of Work, reCAPTCHA v2 and Cloudflare Turnstile</item>
+            <item>Added dedicated vote endpoints for submit, token, powChallenge and refresh</item>
+            <item>Added cache-first frontend rendering with client hydration via vote.refresh</item>
+            <item>Added Cloudflare-aware client IP resolution with published IPv4 and IPv6 proxy ranges</item>
+            <item>Added administrator dashboard with stats, guidance cards and recent items</item>
+            <item>Added survey JSON import and export with size, type and structure limits</item>
+            <item>Added result charts, themes, sizes and optional answer images</item>
+            <item>Added GitHub-based Joomla update server metadata with targetplatform and php_minimum</item>
+            <item>Added repository README, CHANGELOG, release QA gate and CLI smoke tests</item>
+        </addition>
+
+        <change>
+            <item>Voting architecture designed for Joomla 6, PHP 8.3+ and Full Page Cache / Cloudflare compatibility</item>
+            <item>Maintained poll and question responses_count counters avoid page-view COUNT scans on response tables</item>
+            <item>Duplicate protection enforces UNIQUE (poll_id, visitor_hash) with duplicate-key handling</item>
+            <item>Abuse rate limiting is IP-scoped through Joomla cache with session fallback</item>
+            <item>Survey wizard hides inactive steps on first paint to prevent refresh flash of all questions</item>
+            <item>Administrator list ordering uses an allow-list for filter_order values</item>
+            <item>CSV export sanitizes formula-like cell prefixes before download</item>
+            <item>Vote JSON responses use Cache-Control no-store without Vary Cookie</item>
+            <item>Runtime schema migration ensures legacy responses_count columns exist before SELECT</item>
+        </change>
+
+        <security>
+            <item>Added trusted proxy validation before accepting CF-Connecting-IP or X-Forwarded-For</item>
+            <item>Added vote return URL hardening against protocol-relative hosts, path traversal and unsafe fragments</item>
+            <item>Added CSRF token checks on administrator mutating and export actions</item>
+            <item>Added ACL enforcement for administrator manage, create, edit and delete actions</item>
+            <item>Added JSON import caps for file size, decode depth, question count and options per question</item>
+            <item>Added controller to service to storage flow without exposing filesystem paths in frontend responses</item>
+        </security>
+
+        <note>
+            <item>Initial public DevArt Polls stable release for Joomla 6</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Recommended stable release for production Joomla 6 sites behind Full Page Cache</item>
+            <item>Safe update from 0.1.0-alpha9.2.* packages</item>
+            <item>Always test on a staging environment before production deployment</item>
+            <item>Validated on Joomla 6 with cache-first frontend behaviour and release QA gate</item>
+        </note>
+    </changelog>
+</changelogs>
