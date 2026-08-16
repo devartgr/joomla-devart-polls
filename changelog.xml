@@ -3,6 +3,49 @@
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <version>1.1.1</version>
+
+        <addition>
+            <item>Added optional verified email voting without Joomla registration or login</item>
+            <item>Added delivery of a short-lived 6-digit verification code through the Joomla mail configuration</item>
+            <item>Added one-vote-per-poll enforcement for each verified email using a keyed poll-specific hash</item>
+            <item>Added OTP expiry, limited verification attempts, resend cooldown and per-email and per-IP request limits</item>
+            <item>Added support for Joomla Proof of Work, reCAPTCHA v2 and Cloudflare Turnstile before OTP delivery</item>
+        </addition>
+
+        <change>
+            <item>Simplified verified email voting to one clear email plus code mode</item>
+            <item>Removed the combined verified email plus cookie plus IP voting mode</item>
+            <item>Automatically converts legacy email_cookie_ip settings to verified email mode</item>
+            <item>Clears obsolete response cookie and IP hashes from verified-email votes without removing votes</item>
+            <item>Preserved all existing anonymous duplicate-protection modes and cache-safe voting flows</item>
+            <item>Preserved existing polls, surveys, modules, votes, results and configuration during updates</item>
+        </change>
+
+        <security>
+            <item>Plaintext voter email addresses are not stored</item>
+            <item>Email identities are stored as keyed poll-specific hashes</item>
+            <item>Verification codes are securely hashed at rest and can be used only once</item>
+            <item>IP hashes are used only for short-lived OTP request rate limiting and never as voter identities</item>
+            <item>Cookie and IP identity checks are not combined with verified email voting</item>
+            <item>Configured bot protection is validated before sending a verification email</item>
+        </security>
+
+        <note>
+            <item>Important voting and privacy update for Joomla 6</item>
+            <item>One verified email address equals one vote per poll or survey</item>
+            <item>Verified email voting does not guarantee one physical person per vote because multiple or disposable email addresses may exist</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Requires correctly configured Joomla outbound mail for verified email voting</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.0.0</item>
+            <item>Validated and successfully tested on Joomla</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
         <version>1.0.0</version>
 
         <addition>
