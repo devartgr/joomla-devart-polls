@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <updates>
     <update>
@@ -5,6 +6,7 @@
         <description>Polls and surveys for Joomla 6 with cache-safe voting and optional verified email OTP protection.</description>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <client>site</client>
         <version>1.1.1</version>
 
         <infourl title="DevArt Polls">https://github.com/devartgr/joomla-devart-polls</infourl>
