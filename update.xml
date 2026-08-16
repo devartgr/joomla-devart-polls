@@ -2,18 +2,18 @@
 <updates>
     <update>
         <name>DevArt Polls Package</name>
-        <description>Polls and surveys for Joomla 6 with cache-safe voting, survey exports, and Cloudflare-aware duplicate protection.</description>
+        <description>Polls and surveys for Joomla 6 with cache-safe voting and optional verified email OTP protection.</description>
         <element>pkg_devartpolls</element>
         <type>package</type>
-        <version>1.0.0</version>
+        <version>1.1.1</version>
 
         <infourl title="DevArt Polls">https://github.com/devartgr/joomla-devart-polls</infourl>
 
         <downloads>
-            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-polls/releases/download/v1.0.0/pkg_devartpolls_v1.0.0.zip</downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-polls/releases/download/v1.1.1/pkg_devartpolls_v1.1.1.zip</downloadurl>
         </downloads>
 
-        <sha256>523f4d4a3c9e56c901962eec82e51a2a0723a60bbda939f1daa3f9802d23a3db</sha256>
+        <sha256>b1d6b9f5fbe8998f3dac34aaa2fa9ddc03f521c4f7d23371a2ba76c4acdc908b</sha256>
 
         <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-polls/main/changelog.xml</changelogurl>
 
