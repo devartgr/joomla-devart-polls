@@ -1,131 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <changelogs>
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <version>1.2.1</version>
+        <addition>
+            <item>Added Joomla article-backed answers using the fast bounded DevArt article picker</item>
+            <item>Added editable answer titles and intro text populated automatically from selected Joomla articles</item>
+            <item>Added answer intro text with a maximum length of 300 characters without copying the article full text</item>
+            <item>Added article intro image support with the full article image as fallback</item>
+            <item>Added compact image previews for manual and article-backed answers</item>
+            <item>Added drag-and-drop and accessible up/down answer ordering controls</item>
+            <item>Added configurable same-window and new-window article link targets</item>
+        </addition>
+        <change>
+            <item>Refined the Questions interface with numbered answer cards and clearer field grouping</item>
+            <item>Separated answer ordering controls from the destructive remove action</item>
+            <item>Preserved the selected article title and ID after saving and reloading a poll</item>
+            <item>Limited article links to answer titles while keeping images and intro text unlinked</item>
+            <item>Replaced custom Media Manager iframe markup with Joomla Dialog and Media APIs</item>
+            <item>Kept article selection bounded and count-free for fast operation on very large Joomla content tables</item>
+            <item>Preserved existing option IDs and their associated votes when answers are reordered</item>
+            <item>Improved JED Checker compatibility by removing encoding and JAMSS false-positive patterns</item>
+        </change>
+        <security>
+            <item>Article selections are validated server-side before saving</item>
+            <item>Frontend article resolution respects Joomla publication, access and language rules</item>
+            <item>Vote return URLs use bounded plain transport with strict same-site validation</item>
+            <item>Request rate limiting remains active for vote, token, refresh, proof-of-work and email OTP endpoints</item>
+            <item>Answer intro text is stored and rendered as escaped plain text</item>
+        </security>
+        <note>
+            <item>Major article-answer and administrator workflow update for Joomla 6</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.1.2</item>
+            <item>Existing polls, surveys, responses, option IDs and vote counts are preserved</item>
+            <item>Validated and successfully tested on Joomla, including article selection, media selection, ordering and frontend output</item>
+            <item>Passed JED Checker review and 46 automated regression checks</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
         <version>1.1.2</version>
-
-    <addition>
-        <item>Added container-query-based responsive result layouts with a viewport fallback for older browsers</item>
-    </addition>
-
-    <change>
-        <item>Fixed overlapping answer images, long option names, percentages and vote counts in narrow poll containers</item>
-        <item>Added safe wrapping for long names, translations and increased font sizes</item>
-        <item>Made answer images responsive without causing horizontal overflow</item>
-        <item>Kept result progress bars at the full available container width</item>
-        <item>Improved responsive pie and donut chart legends</item>
-        <item>Added reliable responsive rendering for options with or without images</item>
-        <item>Preserved the existing wide desktop result layout when sufficient space is available</item>
-    </change>
-
-    <note>
-        <item>Responsive frontend maintenance update for Joomla 6</item>
-        <item>Applies to poll results rendered through both the component and the site module</item>
-        <item>Requires Joomla 6.0+ and PHP 8.3+</item>
-        <item>Install or update using the full pkg_devartpolls package only</item>
-        <item>Safe update from DevArt Polls 1.1.1</item>
-        <item>No database migration or configuration changes are required</item>
-        <item>Validated and successfully tested on Joomla at desktop and mobile widths, including 200% text scaling</item>
-    </note>
-</changelog>
-
-<changelog>
-    <element>pkg_devartpolls</element>
-    <type>package</type>
-    <version>1.1.1</version>
-
-    <addition>
-        <item>Added optional verified email voting without Joomla registration or login</item>
-        <item>Added delivery of a short-lived 6-digit verification code through the Joomla mail configuration</item>
-        <item>Added one-vote-per-poll enforcement for each verified email using a keyed poll-specific hash</item>
-        <item>Added OTP expiry, limited verification attempts, resend cooldown and per-email and per-IP request limits</item>
-        <item>Added support for Joomla Proof of Work, reCAPTCHA v2 and Cloudflare Turnstile before OTP delivery</item>
-    </addition>
-
-    <change>
-        <item>Simplified verified email voting to one clear email plus code mode</item>
-        <item>Removed the combined verified email plus cookie plus IP voting mode</item>
-        <item>Automatically converts legacy email_cookie_ip settings to verified email mode</item>
-        <item>Clears obsolete response cookie and IP hashes from verified-email votes without removing votes</item>
-        <item>Preserved all existing anonymous duplicate-protection modes and cache-safe voting flows</item>
-        <item>Preserved existing polls, surveys, modules, votes, results and configuration during updates</item>
-    </change>
-
-    <security>
-        <item>Plaintext voter email addresses are not stored</item>
-        <item>Email identities are stored as keyed poll-specific hashes</item>
-        <item>Verification codes are securely hashed at rest and can be used only once</item>
-        <item>IP hashes are used only for short-lived OTP request rate limiting and never as voter identities</item>
-        <item>Cookie and IP identity checks are not combined with verified email voting</item>
-        <item>Configured bot protection is validated before sending a verification email</item>
-    </security>
-
-    <note>
-        <item>Important voting and privacy update for Joomla 6</item>
-        <item>One verified email address equals one vote per poll or survey</item>
-        <item>Verified email voting does not guarantee one physical person per vote because multiple or disposable email addresses may exist</item>
-        <item>Requires Joomla 6.0+ and PHP 8.3+</item>
-        <item>Requires correctly configured Joomla outbound mail for verified email voting</item>
-        <item>Install or update using the full pkg_devartpolls package only</item>
-        <item>Safe update from DevArt Polls 1.0.0</item>
-        <item>Validated and successfully tested on Joomla</item>
-    </note>
-</changelog>
-
-<changelog>
-    <element>pkg_devartpolls</element>
-    <type>package</type>
-    <version>1.0.0</version>
-
-    <addition>
-        <item>Added full Joomla 6 DevArt Polls package with component com_devartpolls and site module mod_devartpoll</item>
-        <item>Added Poll mode for one anonymous question with aggregate counters</item>
-        <item>Added Survey mode for multiple questions, stored responses, response manager and CSV export</item>
-        <item>Added single choice and multiple choice question types</item>
-        <item>Added configurable duplicate protection modes including cookie, cookie+IP and cookie+IP+User-Agent</item>
-        <item>Added optional bot protection with Joomla Proof of Work, reCAPTCHA v2 and Cloudflare Turnstile</item>
-        <item>Added dedicated vote endpoints for submit, token, powChallenge and refresh</item>
-        <item>Added cache-first frontend rendering with client hydration via vote.refresh</item>
-        <item>Added Cloudflare-aware client IP resolution with published IPv4 and IPv6 proxy ranges</item>
-        <item>Added administrator dashboard with stats, guidance cards and recent items</item>
-        <item>Added survey JSON import and export with size, type and structure limits</item>
-        <item>Added result charts, themes, sizes and optional answer images</item>
-        <item>Added GitHub-based Joomla update server metadata with targetplatform and php_minimum</item>
-        <item>Added repository README, CHANGELOG, release QA gate and CLI smoke tests</item>
-    </addition>
-
-    <change>
-        <item>Voting architecture designed for Joomla 6, PHP 8.3+ and Full Page Cache / Cloudflare compatibility</item>
-        <item>Maintained poll and question responses_count counters avoid page-view COUNT scans on response tables</item>
-        <item>Duplicate protection enforces UNIQUE (poll_id, visitor_hash) with duplicate-key handling</item>
-        <item>Abuse rate limiting is IP-scoped through Joomla cache with session fallback</item>
-        <item>Survey wizard hides inactive steps on first paint to prevent refresh flash of all questions</item>
-        <item>Administrator list ordering uses an allow-list for filter_order values</item>
-        <item>CSV export sanitizes formula-like cell prefixes before download</item>
-        <item>Vote JSON responses use Cache-Control no-store without Vary Cookie</item>
-        <item>Runtime schema migration ensures legacy responses_count columns exist before SELECT</item>
-    </change>
-
-    <security>
-        <item>Added trusted proxy validation before accepting CF-Connecting-IP or X-Forwarded-For</item>
-        <item>Added vote return URL hardening against protocol-relative hosts, path traversal and unsafe fragments</item>
-        <item>Added CSRF token checks on administrator mutating and export actions</item>
-        <item>Added ACL enforcement for administrator manage, create, edit and delete actions</item>
-        <item>Added JSON import caps for file size, decode depth, question count and options per question</item>
-        <item>Added controller to service to storage flow without exposing filesystem paths in frontend responses</item>
-    </security>
-
-    <note>
-        <item>Initial public DevArt Polls stable release for Joomla 6</item>
-        <item>Requires Joomla 6.0+ and PHP 8.3+</item>
-        <item>Install or update using the full pkg_devartpolls package only</item>
-        <item>Recommended stable release for production Joomla 6 sites behind Full Page Cache</item>
-        <item>Safe update from 0.1.0-alpha9.2.* packages</item>
-        <item>Always test on a staging environment before production deployment</item>
-        <item>Validated on Joomla 6 with cache-first frontend behaviour and release QA gate</item>
-    </note>
-</changelog>
-
+        <addition>
+            <item>Added container-query-based responsive result layouts with a viewport fallback for older browsers</item>
+        </addition>
+        <change>
+            <item>Fixed overlapping answer images, long option names, percentages and vote counts in narrow poll containers</item>
+            <item>Added safe wrapping for long names, translations and increased font sizes</item>
+            <item>Made answer images responsive without causing horizontal overflow</item>
+            <item>Kept result progress bars at the full available container width</item>
+            <item>Improved responsive pie and donut chart legends</item>
+            <item>Added reliable responsive rendering for options with or without images</item>
+            <item>Preserved the existing wide desktop result layout when sufficient space is available</item>
+        </change>
+        <note>
+            <item>Responsive frontend maintenance update for Joomla 6</item>
+            <item>Applies to poll results rendered through both the component and the site module</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.1.1</item>
+            <item>No database migration or configuration changes are required</item>
+            <item>Validated and successfully tested on Joomla at desktop and mobile widths, including 200% text scaling</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
+        <version>1.1.1</version>
+        <addition>
+            <item>Added optional verified email voting without Joomla registration or login</item>
+            <item>Added delivery of a short-lived 6-digit verification code through the Joomla mail configuration</item>
+            <item>Added one-vote-per-poll enforcement for each verified email using a keyed poll-specific hash</item>
+            <item>Added OTP expiry, limited verification attempts, resend cooldown and per-email and per-IP request limits</item>
+            <item>Added support for Joomla Proof of Work, reCAPTCHA v2 and Cloudflare Turnstile before OTP delivery</item>
+        </addition>
+        <change>
+            <item>Simplified verified email voting to one clear email plus code mode</item>
+            <item>Removed the combined verified email plus cookie plus IP voting mode</item>
+            <item>Automatically converts legacy email_cookie_ip settings to verified email mode</item>
+            <item>Clears obsolete response cookie and IP hashes from verified-email votes without removing votes</item>
+            <item>Preserved all existing anonymous duplicate-protection modes and cache-safe voting flows</item>
+            <item>Preserved existing polls, surveys, modules, votes, results and configuration during updates</item>
+        </change>
+        <security>
+            <item>Plaintext voter email addresses are not stored</item>
+            <item>Email identities are stored as keyed poll-specific hashes</item>
+            <item>Verification codes are securely hashed at rest and can be used only once</item>
+            <item>IP hashes are used only for short-lived OTP request rate limiting and never as voter identities</item>
+            <item>Cookie and IP identity checks are not combined with verified email voting</item>
+            <item>Configured bot protection is validated before sending a verification email</item>
+        </security>
+        <note>
+            <item>Important voting and privacy update for Joomla 6</item>
+            <item>One verified email address equals one vote per poll or survey</item>
+            <item>Verified email voting does not guarantee one physical person per vote because multiple or disposable email addresses may exist</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Requires correctly configured Joomla outbound mail for verified email voting</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.0.0</item>
+            <item>Validated and successfully tested on Joomla</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
+        <version>1.0.0</version>
+        <addition>
+            <item>Added full Joomla 6 DevArt Polls package with component com_devartpolls and site module mod_devartpoll</item>
+            <item>Added Poll mode for one anonymous question with aggregate counters</item>
+            <item>Added Survey mode for multiple questions, stored responses, response manager and CSV export</item>
+            <item>Added single choice and multiple choice question types</item>
+            <item>Added configurable duplicate protection modes including cookie, cookie+IP and cookie+IP+User-Agent</item>
+            <item>Added optional bot protection with Joomla Proof of Work, reCAPTCHA v2 and Cloudflare Turnstile</item>
+            <item>Added dedicated vote endpoints for submit, token, powChallenge and refresh</item>
+            <item>Added cache-first frontend rendering with client hydration via vote.refresh</item>
+            <item>Added Cloudflare-aware client IP resolution with published IPv4 and IPv6 proxy ranges</item>
+            <item>Added administrator dashboard with stats, guidance cards and recent items</item>
+            <item>Added survey JSON import and export with size, type and structure limits</item>
+            <item>Added result charts, themes, sizes and optional answer images</item>
+            <item>Added GitHub-based Joomla update server metadata with targetplatform and php_minimum</item>
+            <item>Added repository README, CHANGELOG, release QA gate and CLI smoke tests</item>
+        </addition>
+        <change>
+            <item>Voting architecture designed for Joomla 6, PHP 8.3+ and Full Page Cache / Cloudflare compatibility</item>
+            <item>Maintained poll and question responses_count counters avoid page-view COUNT scans on response tables</item>
+            <item>Duplicate protection enforces UNIQUE (poll_id, visitor_hash) with duplicate-key handling</item>
+            <item>Abuse rate limiting is IP-scoped through Joomla cache with session fallback</item>
+            <item>Survey wizard hides inactive steps on first paint to prevent refresh flash of all questions</item>
+            <item>Administrator list ordering uses an allow-list for filter_order values</item>
+            <item>CSV export sanitizes formula-like cell prefixes before download</item>
+            <item>Vote JSON responses use Cache-Control no-store without Vary Cookie</item>
+            <item>Runtime schema migration ensures legacy responses_count columns exist before SELECT</item>
+        </change>
+        <security>
+            <item>Added trusted proxy validation before accepting CF-Connecting-IP or X-Forwarded-For</item>
+            <item>Added vote return URL hardening against protocol-relative hosts, path traversal and unsafe fragments</item>
+            <item>Added CSRF token checks on administrator mutating and export actions</item>
+            <item>Added ACL enforcement for administrator manage, create, edit and delete actions</item>
+            <item>Added JSON import caps for file size, decode depth, question count and options per question</item>
+            <item>Added controller to service to storage flow without exposing filesystem paths in frontend responses</item>
+        </security>
+        <note>
+            <item>Initial public DevArt Polls stable release for Joomla 6</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Recommended stable release for production Joomla 6 sites behind Full Page Cache</item>
+            <item>Safe update from 0.1.0-alpha9.2.* packages</item>
+            <item>Always test on a staging environment before production deployment</item>
+            <item>Validated on Joomla 6 with cache-first frontend behaviour and release QA gate</item>
+        </note>
+    </changelog>
 </changelogs>
