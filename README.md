@@ -4,7 +4,7 @@ Polls and surveys for Joomla 6, designed for production websites that need anony
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.1-orange)
+![Release](https://img.shields.io/badge/Version-1.2.2-orange)
 ![License](https://img.shields.io/badge/License-GPLv2%2B-red)
 
 ---
@@ -27,18 +27,18 @@ The extension is built for Joomla 6, PHP 8.3+, Full Page Cache, and Cloudflare-f
 
 ---
 
-## Version 1.2.1
+## Version 1.2.2
 
-DevArt Polls 1.2.1 is the current stable release. It adds Joomla article-backed
-answers, the bounded DevArt article picker, answer ordering, editable answer
-introductions, image previews, and a refined Questions interface.
+DevArt Polls 1.2.2 is the current stable release. It adds frontend translations
+for French, German, Spanish, Italian, and Brazilian Portuguese while retaining
+the Joomla article-backed answers and refined Questions interface from 1.2.1.
 
-The release has completed Joomla installation, update, administrator, frontend,
-media picker, and JED Checker QA.
+The release has completed Joomla installation and frontend QA.
 
 ### Highlights
 
 - Poll and Survey modes
+- English, French, German, Spanish, Italian, and Brazilian Portuguese frontend languages
 - Joomla article-backed poll and survey answers
 - Fast bounded article picker that avoids full content counts
 - Editable answer titles and 300-character plain-text introductions
@@ -69,7 +69,24 @@ The installable package includes:
 
 Install or update using the full package only:
 
-`pkg_devartpolls_v1.2.1.zip`
+`pkg_devartpolls_v1.2.2.zip`
+
+---
+
+## Frontend Languages
+
+The component site output and frontend module include:
+
+- English (`en-GB`)
+- French (`fr-FR`)
+- German (`de-DE`)
+- Spanish (`es-ES`)
+- Italian (`it-IT`)
+- Brazilian Portuguese (`pt-BR`)
+
+The five non-English translations were generated automatically and require
+review by native speakers. Corrections and improvements are welcome through
+GitHub. The administrator interface remains in English.
 
 ---
 
@@ -248,7 +265,7 @@ Security measures include:
 
 1. Download:
 
-   `pkg_devartpolls_v1.2.1.zip`
+   `pkg_devartpolls_v1.2.2.zip`
 
 2. Open Joomla administrator.
 
@@ -279,7 +296,7 @@ Before updating a production website:
 - Verify voting, results, and survey responses
 - Clear page cache / CDN cache when necessary
 
-Version 1.2.1 is a safe update from the verified `1.1.2` release. Existing
+Version 1.2.2 is a safe update from the verified `1.2.1` release. Existing
 polls, surveys, questions, options, responses, votes, results, modules,
 duplicate-protection modes, and settings are preserved. Existing option IDs
 remain stable when answers are reordered.
@@ -298,7 +315,7 @@ removing votes.
 
 Latest release:
 
-`pkg_devartpolls_v1.2.1.zip`
+`pkg_devartpolls_v1.2.2.zip`
 
 GitHub releases:
 
@@ -306,11 +323,11 @@ https://github.com/devartgr/joomla-devart-polls/releases
 
 Direct download:
 
-https://github.com/devartgr/joomla-devart-polls/releases/download/v1.2.1/pkg_devartpolls_v1.2.1.zip
+https://github.com/devartgr/joomla-devart-polls/releases/download/1.2.2/pkg_devartpolls_v1.2.2.zip
 
 SHA-256:
 
-`b9d9595347c632f2b932b6faa6d393319dfac5b7f1b716290f931388216f3811`
+`59ae2bd135af7751c5b14ffdace1de42133be6ebafa4feb9abc176d2744c54f0`
 
 ---
 
