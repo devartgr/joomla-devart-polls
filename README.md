@@ -1,10 +1,10 @@
 # DevArt Polls for Joomla
 
-Polls and surveys for Joomla 6, designed for production websites that need anonymous voting, cache-safe frontend rendering, and simple survey response handling.
+Polls and surveys for Joomla 6, designed for production websites that need anonymous voting, Joomla article-backed answers, cache-safe frontend rendering, and simple survey response handling.
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.1-orange)
+![Release](https://img.shields.io/badge/Version-1.2.1-orange)
 ![License](https://img.shields.io/badge/License-GPLv2%2B-red)
 
 ---
@@ -27,18 +27,25 @@ The extension is built for Joomla 6, PHP 8.3+, Full Page Cache, and Cloudflare-f
 
 ---
 
-## Version 1.1.1
+## Version 1.2.1
 
-DevArt Polls 1.1.1 is the current stable release. It adds optional verified
-email voting without requiring Joomla registration or login and has completed
-Joomla installation and voting QA.
+DevArt Polls 1.2.1 is the current stable release. It adds Joomla article-backed
+answers, the bounded DevArt article picker, answer ordering, editable answer
+introductions, image previews, and a refined Questions interface.
 
-Version 1.0.0 remains the initial stable public release and the supported update
-baseline for 1.1.1.
+The release has completed Joomla installation, update, administrator, frontend,
+media picker, and JED Checker QA.
 
 ### Highlights
 
 - Poll and Survey modes
+- Joomla article-backed poll and survey answers
+- Fast bounded article picker that avoids full content counts
+- Editable answer titles and 300-character plain-text introductions
+- Article intro image support with full article image fallback
+- Drag-and-drop and accessible up/down answer ordering
+- Numbered answer cards with compact image previews
+- Same-window or new-window article title links
 - Optional verified email voting with a short-lived 6-digit code
 - One vote per verified email address for each poll or survey
 - Privacy-focused voter identity hashing without plaintext email storage
@@ -62,7 +69,7 @@ The installable package includes:
 
 Install or update using the full package only:
 
-`pkg_devartpolls_v1.1.1.zip`
+`pkg_devartpolls_v1.2.1.zip`
 
 ---
 
@@ -85,6 +92,32 @@ Survey answers can be stored as full responses or aggregate counters, depending 
 
 ---
 
+## Joomla Article-Backed Answers
+
+Each poll or survey answer can use either manually entered content or an
+existing Joomla article.
+
+Article-backed answers support:
+
+- Fast bounded article selection without a full result count
+- Persistent selected article title and ID
+- Automatic editable title and intro-text prefilling
+- A 300-character plain-text introduction limit
+- Article intro image with full article image fallback
+- Compact administrator image previews
+- Same-window or new-window article title links
+- Joomla publication, access, and language checks on the frontend
+
+Only the answer title is linked to the Joomla article. The answer image and
+intro text remain unlinked, and voting remains attached to the existing poll
+option ID.
+
+The bounded picker list has been tested on a Joomla site with approximately
+230,000 articles. Category filtering and further large-dataset title-search
+optimization are planned for a future release.
+
+---
+
 ## Frontend Module
 
 Publish the DevArt Poll module on any site position and select a published poll or survey.
@@ -94,6 +127,8 @@ The module supports:
 - Result display modes
 - Chart types and themes
 - Optional answer images
+- Manual and Joomla article-backed answers
+- Optional plain-text answer introductions
 - Header and footer text
 - Bot protection widgets when enabled
 
@@ -170,6 +205,9 @@ The component provides:
 - Dashboard with totals, status counts, and recent items
 - Polls and surveys list
 - Poll/survey editor with questions and options
+- Numbered answer cards with drag-and-drop and up/down ordering
+- Fast Joomla article picker with editable title and intro metadata
+- Joomla-native Media Manager selection with image previews
 - Survey response summary
 - CSV export with formula-injection sanitization
 - JSON import/export
@@ -210,7 +248,7 @@ Security measures include:
 
 1. Download:
 
-   `pkg_devartpolls_v1.1.1.zip`
+   `pkg_devartpolls_v1.2.1.zip`
 
 2. Open Joomla administrator.
 
@@ -241,9 +279,14 @@ Before updating a production website:
 - Verify voting, results, and survey responses
 - Clear page cache / CDN cache when necessary
 
-Version 1.1.1 is a safe update from the stable `1.0.0` release. Existing polls,
-surveys, votes, results, modules, anonymous duplicate-protection modes, and
-settings are preserved.
+Version 1.2.1 is a safe update from the verified `1.1.2` release. Existing
+polls, surveys, questions, options, responses, votes, results, modules,
+duplicate-protection modes, and settings are preserved. Existing option IDs
+remain stable when answers are reordered.
+
+The package also contains the additive migrations required by earlier stable
+releases. Updating a production website should still be tested on staging,
+especially when upgrading directly from an older release.
 
 Legacy `email_cookie_ip` settings are automatically converted to the simplified
 verified email mode. Obsolete response cookie and IP hashes are cleared without
@@ -255,7 +298,7 @@ removing votes.
 
 Latest release:
 
-`pkg_devartpolls_v1.1.1.zip`
+`pkg_devartpolls_v1.2.1.zip`
 
 GitHub releases:
 
@@ -263,11 +306,11 @@ https://github.com/devartgr/joomla-devart-polls/releases
 
 Direct download:
 
-https://github.com/devartgr/joomla-devart-polls/releases/download/v1.1.1/pkg_devartpolls_v1.1.1.zip
+https://github.com/devartgr/joomla-devart-polls/releases/download/v1.2.1/pkg_devartpolls_v1.2.1.zip
 
 SHA-256:
 
-`b1d6b9f5fbe8998f3dac34aaa2fa9ddc03f521c4f7d23371a2ba76c4acdc908b`
+`b9d9595347c632f2b932b6faa6d393319dfac5b7f1b716290f931388216f3811`
 
 ---
 
