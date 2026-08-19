@@ -4,7 +4,7 @@ Polls and surveys for Joomla 6, designed for production websites that need anony
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.2-orange)
+![Release](https://img.shields.io/badge/Version-1.2.4-orange)
 ![License](https://img.shields.io/badge/License-GPLv2%2B-red)
 
 ---
@@ -27,36 +27,37 @@ The extension is built for Joomla 6, PHP 8.3+, Full Page Cache, and Cloudflare-f
 
 ---
 
-## Version 1.2.2
+## Version 1.2.4
 
-DevArt Polls 1.2.2 is the current stable release. It adds frontend translations
-for French, German, Spanish, Italian, and Brazilian Portuguese while retaining
-the Joomla article-backed answers and refined Questions interface from 1.2.1.
-
-The release has completed Joomla installation and frontend QA.
+DevArt Polls 1.2.4 is the current stable release. It adds full multilingual
+admin and frontend coverage for six languages: English, French, Greek, German,
+Spanish, Italian, and Brazilian Portuguese.
 
 ### Highlights
 
 - Poll and Survey modes
-- English, French, German, Spanish, Italian, and Brazilian Portuguese frontend languages
-- Joomla article-backed poll and survey answers
-- Fast bounded article picker that avoids full content counts
-- Editable answer titles and 300-character plain-text introductions
-- Article intro image support with full article image fallback
-- Drag-and-drop and accessible up/down answer ordering
-- Numbered answer cards with compact image previews
-- Same-window or new-window article title links
-- Optional verified email voting with a short-lived 6-digit code
-- One vote per verified email address for each poll or survey
-- Privacy-focused voter identity hashing without plaintext email storage
-- Cache-safe voting with client hydration via `vote.refresh`
-- Duplicate protection with database unique constraint
-- Cloudflare-aware client IP handling (IPv4 and IPv6)
-- Optional Proof of Work, reCAPTCHA v2, and Cloudflare Turnstile
-- Survey response manager with CSV export
-- JSON import/export for poll and survey definitions
-- Administrator dashboard with stats and recent items
-- GitHub-based Joomla update server support
+- Full admin + frontend translations for all supported languages
+- Greek (`el-GR`) administrator and frontend translations
+- German (`de-DE`), Spanish (`es-ES`), Italian (`it-IT`), Brazilian Portuguese (`pt-BR`) administrator translations
+- French (`fr-FR`) translations reviewed by Philippe COBESSI
+- Machine-generated translations open to native-speaker review
+- No PHP, JavaScript, CSS, database, or voting-logic changes
+
+---
+
+## Version 1.2.3
+
+DevArt Polls 1.2.3 added native French administrator translations reviewed by
+**Philippe COBESSI**, together with updated French frontend strings for the
+component site output and frontend module.
+
+---
+
+## Version 1.2.2
+
+DevArt Polls 1.2.2 added frontend translations for French, German, Spanish,
+Italian, and Brazilian Portuguese while retaining the Joomla article-backed
+answers and refined Questions interface from 1.2.1.
 
 ---
 
@@ -69,24 +70,37 @@ The installable package includes:
 
 Install or update using the full package only:
 
-`pkg_devartpolls_v1.2.2.zip`
+`pkg_devartpolls_v1.2.4.zip`
 
 ---
 
-## Frontend Languages
+## Languages
+
+### Frontend
 
 The component site output and frontend module include:
 
 - English (`en-GB`)
-- French (`fr-FR`)
+- French (`fr-FR`) — reviewed by Philippe COBESSI
 - German (`de-DE`)
 - Spanish (`es-ES`)
 - Italian (`it-IT`)
 - Brazilian Portuguese (`pt-BR`)
+- Greek (`el-GR`)
 
-The five non-English translations were generated automatically and require
-review by native speakers. Corrections and improvements are welcome through
-GitHub. The administrator interface remains in English.
+### Administrator
+
+- English (`en-GB`)
+- French (`fr-FR`) — reviewed by Philippe COBESSI
+- German (`de-DE`)
+- Spanish (`es-ES`)
+- Italian (`it-IT`)
+- Brazilian Portuguese (`pt-BR`)
+- Greek (`el-GR`)
+
+Non-English translations (except French) were generated automatically and remain
+open to native-speaker review. Corrections and improvements are welcome through
+GitHub. See `docs/translations.md` for contributor credits and language status.
 
 ---
 
@@ -160,7 +174,7 @@ DevArt Polls is designed for cache-first frontend rendering.
 - Page HTML can be cached by Joomla or Cloudflare Full Page Cache
 - Vote endpoints send `Cache-Control: no-store`
 - After page load, the module hydrates visitor state and live counters through `vote.refresh`
-- Stale “already voted” markup is corrected for the current visitor
+- Stale "already voted" markup is corrected for the current visitor
 
 This keeps voting independent of full-page cache.
 
@@ -265,7 +279,7 @@ Security measures include:
 
 1. Download:
 
-   `pkg_devartpolls_v1.2.2.zip`
+   `pkg_devartpolls_v1.2.4.zip`
 
 2. Open Joomla administrator.
 
@@ -296,7 +310,7 @@ Before updating a production website:
 - Verify voting, results, and survey responses
 - Clear page cache / CDN cache when necessary
 
-Version 1.2.2 is a safe update from the verified `1.2.1` release. Existing
+Version 1.2.4 is a safe update from the verified `1.2.3` release. Existing
 polls, surveys, questions, options, responses, votes, results, modules,
 duplicate-protection modes, and settings are preserved. Existing option IDs
 remain stable when answers are reordered.
@@ -315,7 +329,7 @@ removing votes.
 
 Latest release:
 
-`pkg_devartpolls_v1.2.2.zip`
+`pkg_devartpolls_v1.2.4.zip`
 
 GitHub releases:
 
@@ -323,11 +337,11 @@ https://github.com/devartgr/joomla-devart-polls/releases
 
 Direct download:
 
-https://github.com/devartgr/joomla-devart-polls/releases/download/1.2.2/pkg_devartpolls_v1.2.2.zip
+https://github.com/devartgr/joomla-devart-polls/releases/download/v1.2.4/pkg_devartpolls_v1.2.4.zip
 
 SHA-256:
 
-`59ae2bd135af7751c5b14ffdace1de42133be6ebafa4feb9abc176d2744c54f0`
+`321c7008f12fb5ef00138f66d2bfb48c3b313eefbf2b1f1545ba7367db6fa1e4`
 
 ---
 
