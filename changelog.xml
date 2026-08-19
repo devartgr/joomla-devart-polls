@@ -3,6 +3,53 @@
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <version>1.2.4</version>
+        <addition>
+            <item>Added machine-generated Greek (el-GR) administrator and frontend translations</item>
+            <item>Added machine-generated administrator translations for German (de-DE), Spanish (es-ES), Italian (it-IT), and Brazilian Portuguese (pt-BR)</item>
+        </addition>
+        <change>
+            <item>Registered the new language files in the component, module and package manifests</item>
+            <item>Preserved all English language keys and format placeholders across every translation</item>
+            <item>Marked the new translations as automatically generated and open to native-speaker review</item>
+        </change>
+        <note>
+            <item>Multilingual language-file update for Joomla 6</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.2.3</item>
+            <item>No PHP, JavaScript, CSS, database schema, or voting-logic changes</item>
+            <item>Existing polls, surveys, responses, option IDs and vote counts are preserved</item>
+            <item>Machine-generated translations are open to native-speaker review</item>
+            <item>Validated and successfully tested on Joomla</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
+        <version>1.2.3</version>
+        <addition>
+            <item>Added native French administrator translations reviewed by Philippe COBESSI</item>
+            <item>Added French package, component administrator, site and module language files</item>
+        </addition>
+        <change>
+            <item>Replaced the machine-generated French frontend strings with the reviewed French translation set</item>
+            <item>Registered the new French administrator and installer language files in the component, module and package manifests</item>
+            <item>Documented translation contributors in docs/translations.md</item>
+        </change>
+        <note>
+            <item>French translation update for Joomla 6</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.2.2</item>
+            <item>No PHP, JavaScript, CSS, database schema or voting-logic changes</item>
+            <item>Existing polls, surveys, responses, option IDs and vote counts are preserved</item>
+            <item>Other frontend languages remain machine-generated and open to native-speaker review</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
         <version>1.2.2</version>
         <addition>
             <item>Added frontend translations for French, German, Spanish, Italian and Brazilian Portuguese</item>
@@ -24,7 +71,6 @@
             <item>Validated and successfully tested on Joomla</item>
         </note>
     </changelog>
-
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
@@ -65,7 +111,6 @@
             <item>Passed JED Checker review and 46 automated regression checks</item>
         </note>
     </changelog>
-
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
@@ -92,7 +137,6 @@
             <item>Validated and successfully tested on Joomla at desktop and mobile widths, including 200% text scaling</item>
         </note>
     </changelog>
-
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
@@ -131,7 +175,6 @@
             <item>Validated and successfully tested on Joomla</item>
         </note>
     </changelog>
-
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
