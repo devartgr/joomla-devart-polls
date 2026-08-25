@@ -3,6 +3,31 @@
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <version>1.2.5</version>
+        <change>
+            <item>Replaced deprecated PHP 8.5 http_response_header usage with http_get_last_response_headers() and a PHP 8.3 fallback</item>
+            <item>Captcha hostname validation now uses Joomla Uri::getInstance()->getHost() instead of the client-controlled HTTP_HOST header</item>
+            <item>Updated French translations from Philippe COBESSI review package Translations V2 while preserving technical tokens such as vote.refresh</item>
+            <item>Added a Joomla category filter to the bounded article picker modal</item>
+            <item>Optimized article title search to use index-friendly prefix matching for large content tables</item>
+            <item>Restyled the administrator dashboard hub with action cards for New Poll, Polls and Survey Responses plus a dedicated Options button</item>
+            <item>Grouped Display tab settings into bordered fieldsets for theme, answer images, header and footer</item>
+            <item>Added machine-generated administrator and frontend translations for cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR and zh-CN</item>
+            <item>Added Argos-first translation tooling with Google fallback and language INI validation for placeholders and technical tokens</item>
+            <item>Quoted all machine-generated language INI values for JED Checker compatibility</item>
+        </change>
+        <note>
+            <item>Maintenance and administrator workflow update for Joomla 6</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.2.4</item>
+            <item>No database schema, poll data, or voting-logic changes</item>
+            <item>Existing polls, surveys, responses, option IDs and vote counts are preserved</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
         <version>1.2.4</version>
         <addition>
             <item>Added machine-generated Greek (el-GR) administrator and frontend translations</item>
