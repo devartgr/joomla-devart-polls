@@ -11,7 +11,7 @@
         <downloads>
             <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-polls/releases/download/v1.2.5/pkg_devartpolls_v1.2.5.zip</downloadurl>
         </downloads>
-        <sha256>5f06d15c94b5d14b660ff638c7f6c7e67245f6de6aaa74cd054811f74130ef36</sha256>
+        <sha256>40856c88ed52494acefee8b07c9ea9ce0dd2835d3098bf501eee2af04258374d</sha256>
         <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-polls/main/changelog.xml</changelogurl>
         <targetplatform name="joomla" version="6.*" />
         <php_minimum>8.3.0</php_minimum>
