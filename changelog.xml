@@ -3,11 +3,31 @@
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <version>1.2.6</version>
+        <fix>
+            <item>Fixed verified email OTP expiry checks rejecting fresh codes on non-UTC PHP timezones such as Europe/Paris</item>
+        </fix>
+        <change>
+            <item>Added Reset Protection Locks administrator action to clear email OTP, visitor and cookie duplicate locks without resetting vote counters</item>
+            <item>Updated French administrator and module translations from easysiteshop.com review package while preserving technical tokens such as vote.refresh</item>
+        </change>
+        <note>
+            <item>Bugfix for verified email voting on Joomla 6</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.2.5</item>
+            <item>No database schema, poll data, or voting-logic changes beyond timezone-safe OTP expiry comparison</item>
+            <item>Existing polls, surveys, responses, option IDs and vote counts are preserved</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
         <version>1.2.5</version>
         <change>
             <item>Replaced deprecated PHP 8.5 http_response_header usage with http_get_last_response_headers() and a PHP 8.3 fallback</item>
             <item>Captcha hostname validation now uses Joomla Uri::getInstance()->getHost() instead of the client-controlled HTTP_HOST header</item>
-            <item>Updated French translations from Philippe COBESSI review package Translations V2 while preserving technical tokens such as vote.refresh</item>
+            <item>Updated French translations from easysiteshop.com review package Translations V2 while preserving technical tokens such as vote.refresh</item>
             <item>Added a Joomla category filter to the bounded article picker modal</item>
             <item>Optimized article title search to use index-friendly prefix matching for large content tables</item>
             <item>Restyled the administrator dashboard hub with action cards for New Poll, Polls and Survey Responses plus a dedicated Options button</item>
@@ -54,7 +74,7 @@
         <type>package</type>
         <version>1.2.3</version>
         <addition>
-            <item>Added native French administrator translations reviewed by Philippe COBESSI</item>
+            <item>Added native French administrator translations reviewed by easysiteshop.com</item>
             <item>Added French package, component administrator, site and module language files</item>
         </addition>
         <change>

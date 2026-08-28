@@ -4,7 +4,7 @@ Polls and surveys for Joomla 6, designed for production websites that need anony
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.5-orange)
+![Release](https://img.shields.io/badge/Version-1.2.6-orange)
 ![License](https://img.shields.io/badge/License-GPLv2%2B-red)
 
 ---
@@ -27,9 +27,24 @@ The extension is built for Joomla 6, PHP 8.3+, Full Page Cache, and Cloudflare-f
 
 ---
 
+## Version 1.2.6
+
+DevArt Polls 1.2.6 is the current stable release. It fixes verified email OTP
+expiry validation on non-UTC PHP timezones (for example Europe/Paris), where
+fresh codes were incorrectly rejected as expired.
+
+### Highlights
+
+- Timezone-safe OTP expiry comparison using Joomla `Date` in UTC
+- **Reset Protection Locks** administrator action for clearing email/cookie/visitor duplicate locks without wiping vote counters (testing/staging)
+- Latest easysiteshop.com French administrator and module review updates
+- Safe update from DevArt Polls 1.2.5 — no database schema changes
+
+---
+
 ## Version 1.2.5
 
-DevArt Polls 1.2.5 is the current stable release. It adds PHP 8.4/8.5 captcha
+DevArt Polls 1.2.5 added PHP 8.4/8.5 captcha
 compatibility fixes, article picker improvements, a redesigned administrator
 dashboard hub, Display tab fieldset grouping, eight additional languages, and
 JED Checker–compatible quoted language INI values.
@@ -41,7 +56,7 @@ JED Checker–compatible quoted language INI values.
 - Redesigned administrator dashboard hub with action cards and Modules shortcut
 - Display tab grouped into bordered fieldsets (theme, answer images, header, footer)
 - Machine-generated translations for Czech, Dutch, Polish, Russian, Ukrainian, Japanese, Turkish, and Chinese Simplified
-- French (`fr-FR`) translations reviewed by Philippe COBESSI (unchanged in this release)
+- French (`fr-FR`) translations reviewed by easysiteshop.com (unchanged in this release)
 - JED Checker–compatible quoted language INI values for all machine-generated locales
 - Safe update from DevArt Polls 1.2.4 — no database schema or voting-logic changes
 
@@ -59,7 +74,7 @@ Portuguese.
 - Full admin + frontend translations for all supported languages at that time
 - Greek (`el-GR`) administrator and frontend translations
 - German (`de-DE`), Spanish (`es-ES`), Italian (`it-IT`), Brazilian Portuguese (`pt-BR`) administrator translations
-- French (`fr-FR`) translations reviewed by Philippe COBESSI
+- French (`fr-FR`) translations reviewed by easysiteshop.com
 - Machine-generated translations open to native-speaker review
 - No PHP, JavaScript, CSS, database, or voting-logic changes
 
@@ -68,7 +83,7 @@ Portuguese.
 ## Version 1.2.3
 
 DevArt Polls 1.2.3 added native French administrator translations reviewed by
-**Philippe COBESSI**, together with updated French frontend strings for the
+**easysiteshop.com**, together with updated French frontend strings for the
 component site output and frontend module.
 
 ---
@@ -90,7 +105,7 @@ The installable package includes:
 
 Install or update using the full package only:
 
-`pkg_devartpolls_v1.2.5.zip`
+`pkg_devartpolls_v1.2.6.zip`
 
 ---
 
@@ -101,7 +116,7 @@ Install or update using the full package only:
 The component site output and frontend module include:
 
 - English (`en-GB`)
-- French (`fr-FR`) — reviewed by Philippe COBESSI
+- French (`fr-FR`) — reviewed by easysiteshop.com
 - German (`de-DE`)
 - Spanish (`es-ES`)
 - Italian (`it-IT`)
@@ -119,7 +134,7 @@ The component site output and frontend module include:
 ### Administrator
 
 - English (`en-GB`)
-- French (`fr-FR`) — reviewed by Philippe COBESSI
+- French (`fr-FR`) — reviewed by easysiteshop.com
 - German (`de-DE`)
 - Spanish (`es-ES`)
 - Italian (`it-IT`)
@@ -315,7 +330,7 @@ Security measures include:
 
 1. Download:
 
-   `pkg_devartpolls_v1.2.5.zip`
+   `pkg_devartpolls_v1.2.6.zip`
 
 2. Open Joomla administrator.
 
@@ -346,7 +361,7 @@ Before updating a production website:
 - Verify voting, results, and survey responses
 - Clear page cache / CDN cache when necessary
 
-Version 1.2.5 is a safe update from the verified `1.2.4` release. Existing
+Version 1.2.6 is a safe update from the verified `1.2.5` release. Existing
 polls, surveys, questions, options, responses, votes, results, modules,
 duplicate-protection modes, and settings are preserved. Existing option IDs
 remain stable when answers are reordered.
@@ -365,7 +380,7 @@ removing votes.
 
 Latest release:
 
-`pkg_devartpolls_v1.2.5.zip`
+`pkg_devartpolls_v1.2.6.zip`
 
 GitHub releases:
 
@@ -373,11 +388,11 @@ https://github.com/devartgr/joomla-devart-polls/releases
 
 Direct download:
 
-https://github.com/devartgr/joomla-devart-polls/releases/download/v1.2.5/pkg_devartpolls_v1.2.5.zip
+https://github.com/devartgr/joomla-devart-polls/releases/download/v1.2.6/pkg_devartpolls_v1.2.6.zip
 
 SHA-256:
 
-`5f06d15c94b5d14b660ff638c7f6c7e67245f6de6aaa74cd054811f74130ef36`
+`bf9c8b37136f06959004031f1c9b5c323367c96d382c15803809fed9df128398`
 
 ---
 
