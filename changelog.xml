@@ -3,6 +3,26 @@
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <version>1.2.7</version>
+        <fix>
+            <item>Fixed Reset Results and Reset Protection Locks TypeError caused by an incorrect Joomla Input type hint</item>
+        </fix>
+        <change>
+            <item>Moved thank-you and already-voted confirmation messages below results so they remain visible after voting on long candidate lists</item>
+            <item>Scroll the confirmation status into view after AJAX vote or already-voted refresh</item>
+        </change>
+        <note>
+            <item>Bugfix and frontend confirmation polish for Joomla 6</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.2.6</item>
+            <item>No database schema changes</item>
+            <item>Existing polls, surveys, responses, option IDs and vote counts are preserved</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
         <version>1.2.6</version>
         <fix>
             <item>Fixed verified email OTP expiry checks rejecting fresh codes on non-UTC PHP timezones such as Europe/Paris</item>
