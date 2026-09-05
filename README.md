@@ -4,7 +4,7 @@ Polls and surveys for Joomla 6, designed for production websites that need anony
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.7-orange)
+![Release](https://img.shields.io/badge/Version-1.2.8-orange)
 ![License](https://img.shields.io/badge/License-GPLv2%2B-red)
 
 ---
@@ -27,9 +27,24 @@ The extension is built for Joomla 6, PHP 8.3+, Full Page Cache, and Cloudflare-f
 
 ---
 
+## Version 1.2.8
+
+DevArt Polls 1.2.8 is the current stable release. Poll results boards now show
+options ordered by vote count (highest first). Survey results keep the
+administrator order. The vote form is never reordered.
+
+### Highlights
+
+- **Results Order** setting on the Results tab (By votes / Administrator order)
+- Poll results can show the leader first; Surveys keep fixed admin option order
+- Vote form option order unchanged
+- Safe update from DevArt Polls 1.2.7 — no database schema changes
+
+---
+
 ## Version 1.2.7
 
-DevArt Polls 1.2.7 is the current stable release. It fixes the Reset Results /
+DevArt Polls 1.2.7 fixed the Reset Results /
 Reset Protection Locks TypeError and improves thank-you / already-voted
 confirmation placement after voting.
 
@@ -120,7 +135,7 @@ The installable package includes:
 
 Install or update using the full package only:
 
-`pkg_devartpolls_v1.2.7.zip`
+`pkg_devartpolls_v1.2.8.zip`
 
 ---
 
@@ -345,7 +360,7 @@ Security measures include:
 
 1. Download:
 
-   `pkg_devartpolls_v1.2.7.zip`
+   `pkg_devartpolls_v1.2.8.zip`
 
 2. Open Joomla administrator.
 
@@ -376,7 +391,7 @@ Before updating a production website:
 - Verify voting, results, and survey responses
 - Clear page cache / CDN cache when necessary
 
-Version 1.2.7 is a safe update from the verified `1.2.6` release. Existing
+Version 1.2.8 is a safe update from the verified `1.2.7` release. Existing
 polls, surveys, questions, options, responses, votes, results, modules,
 duplicate-protection modes, and settings are preserved. Existing option IDs
 remain stable when answers are reordered.
@@ -395,7 +410,7 @@ removing votes.
 
 Latest release:
 
-`pkg_devartpolls_v1.2.7.zip`
+`pkg_devartpolls_v1.2.8.zip`
 
 GitHub releases:
 
@@ -403,11 +418,11 @@ https://github.com/devartgr/joomla-devart-polls/releases
 
 Direct download:
 
-https://github.com/devartgr/joomla-devart-polls/releases/download/v1.2.7/pkg_devartpolls_v1.2.7.zip
+https://github.com/devartgr/joomla-devart-polls/releases/download/v1.2.8/pkg_devartpolls_v1.2.8.zip
 
 SHA-256:
 
-`578ea4d9afdd5b3f0cdb23a0a3fb9af1abc3c7b48300bb0fa7a82dd82652ab3f`
+`d498a3cdba60903579e4f9f7949a9df95722ed42aac4e8a602e41c7c60683b2d`
 
 ---
 

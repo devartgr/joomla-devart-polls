@@ -3,6 +3,23 @@
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <version>1.2.8</version>
+        <change>
+            <item>Poll results boards can list options by vote count (highest first) via the Results Order setting</item>
+            <item>Survey results keep administrator option ordering unchanged</item>
+            <item>Vote form option order is never reordered by live vote counts</item>
+        </change>
+        <note>
+            <item>Frontend results display polish for Joomla 6</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.2.7</item>
+            <item>No database schema changes; option IDs and vote counts are preserved</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
         <version>1.2.7</version>
         <fix>
             <item>Fixed Reset Results and Reset Protection Locks TypeError caused by an incorrect Joomla Input type hint</item>
