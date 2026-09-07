@@ -3,6 +3,25 @@
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <version>1.2.9</version>
+        <addition>
+            <item>Added Options Layout on the Display tab: List or Cards for the vote form</item>
+            <item>Cards mode supports configurable columns for phone, tablet and desktop containers</item>
+        </addition>
+        <fix>
+            <item>Fixed Display group title that showed a literal HTML ampersand entity instead of Theme and size</item>
+        </fix>
+        <note>
+            <item>Results boards are not affected by Options Layout</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.2.8</item>
+            <item>No database schema changes; option IDs and vote counts are preserved</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
         <version>1.2.8</version>
         <change>
             <item>Poll results boards can list options by vote count (highest first) via the Results Order setting</item>

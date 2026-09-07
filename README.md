@@ -4,7 +4,7 @@ Polls and surveys for Joomla 6, designed for production websites that need anony
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.8-orange)
+![Release](https://img.shields.io/badge/Version-1.2.9-orange)
 ![License](https://img.shields.io/badge/License-GPLv2%2B-red)
 
 ---
@@ -27,11 +27,34 @@ The extension is built for Joomla 6, PHP 8.3+, Full Page Cache, and Cloudflare-f
 
 ---
 
+## Version 1.2.9
+
+DevArt Polls 1.2.9 is the current stable release. The Display tab can switch
+the vote form between List and Cards layouts, with optional column counts per
+device. Results boards are unchanged. The Theme group title display bug is fixed.
+
+### Highlights
+
+- **Options Layout**: List (default) or Cards on the Display tab
+- Cards columns for phone, tablet and desktop containers
+- Vote form only — results boards keep their existing layout
+- Fixed administrator label **Theme and size** (no literal `&amp;`)
+
+### Requirements
+
+- Joomla 6.0+
+- PHP 8.3+
+
+### Safe update
+
+Safe update from DevArt Polls 1.2.8. No database schema changes.
+
+---
+
 ## Version 1.2.8
 
-DevArt Polls 1.2.8 is the current stable release. Poll results boards now show
-options ordered by vote count (highest first). Survey results keep the
-administrator order. The vote form is never reordered.
+DevArt Polls 1.2.8 added Poll Results Order (By votes / Administrator order).
+Survey results keep the administrator order. The vote form is never reordered.
 
 ### Highlights
 
