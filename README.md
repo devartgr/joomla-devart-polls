@@ -4,7 +4,7 @@ Polls and surveys for Joomla 6, designed for production websites that need anony
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.9-orange)
+![Release](https://img.shields.io/badge/Version-1.2.10-orange)
 ![License](https://img.shields.io/badge/License-GPLv2%2B-red)
 
 ---
@@ -27,11 +27,34 @@ The extension is built for Joomla 6, PHP 8.3+, Full Page Cache, and Cloudflare-f
 
 ---
 
+## Version 1.2.10
+
+DevArt Polls 1.2.10 is the current stable release. It fixes the site-router
+menu lookup that triggered `Undefined property: MenuItem::$client_id` under
+PHP 8.x (same SiteMenu fix as Documents / Events / Business / Video / Gallery /
+Forms).
+
+### Highlights
+
+- Site router no longer filters menu items by `MenuItem::client_id`
+- Safe update from DevArt Polls 1.2.9
+
+### Requirements
+
+- Joomla 6.0+
+- PHP 8.3+
+
+### Safe update
+
+Safe update from DevArt Polls 1.2.9. No database schema changes.
+
+---
+
 ## Version 1.2.9
 
-DevArt Polls 1.2.9 is the current stable release. The Display tab can switch
-the vote form between List and Cards layouts, with optional column counts per
-device. Results boards are unchanged. The Theme group title display bug is fixed.
+DevArt Polls 1.2.9 added Display Options Layout (List / Cards) with optional
+column counts per device. Results boards are unchanged. The Theme group title
+display bug is fixed.
 
 ### Highlights
 
