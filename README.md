@@ -4,7 +4,7 @@ Polls and surveys for Joomla 6, designed for production websites that need anony
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.10-orange)
+![Release](https://img.shields.io/badge/Version-1.2.11-orange)
 ![License](https://img.shields.io/badge/License-GPLv2%2B-red)
 
 ---
@@ -27,17 +27,18 @@ The extension is built for Joomla 6, PHP 8.3+, Full Page Cache, and Cloudflare-f
 
 ---
 
-## Version 1.2.10
+## Version 1.2.11
 
-DevArt Polls 1.2.10 is the current stable release. It fixes the site-router
-menu lookup that triggered `Undefined property: MenuItem::$client_id` under
-PHP 8.x (same SiteMenu fix as Documents / Events / Business / Video / Gallery /
-Forms).
+DevArt Polls 1.2.11 is the current stable release. It fixes Messages tab custom
+text saving, the Survey Response Storage `counters_only` editor overwrite, and
+related low-risk correctness/security polish.
 
 ### Highlights
 
-- Site router no longer filters menu items by `MenuItem::client_id`
-- Safe update from DevArt Polls 1.2.9
+- Messages tab custom texts save and reload correctly
+- Survey `counters_only` is preserved when reopening the editor
+- Unexpected vote errors return a generic visitor message
+- Safe update from DevArt Polls 1.2.10
 
 ### Requirements
 
@@ -46,7 +47,7 @@ Forms).
 
 ### Safe update
 
-Safe update from DevArt Polls 1.2.9. No database schema changes.
+Safe update from DevArt Polls 1.2.10. No database schema changes.
 
 ---
 

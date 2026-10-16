@@ -3,6 +3,28 @@
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <version>1.2.11</version>
+        <fix>
+            <item>Messages tab custom texts now save correctly using flat message_* form fields</item>
+            <item>Survey Response Storage counters_only is no longer overwritten to full when reopening the editor</item>
+            <item>Vote endpoints return a generic message for unexpected internal errors instead of exception details</item>
+            <item>Update script deletes duplicate visitor rows only when creating the unique visitor index</item>
+            <item>CSV export sets an explicit empty fputcsv escape argument for PHP 8.4+</item>
+        </fix>
+        <change>
+            <item>Empty Messages tab defaults fall back to translated frontend language strings</item>
+            <item>Response Storage defaults are unified to counters_only; existing saved full surveys are unchanged</item>
+        </change>
+        <note>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.2.10</item>
+            <item>No database schema changes; option IDs and vote counts are preserved</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
         <version>1.2.10</version>
         <fix>
             <item>Frontend menu lookup no longer filters by MenuItem::client_id, avoiding Undefined property warnings under PHP 8.x</item>
