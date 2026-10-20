@@ -3,6 +3,24 @@
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <version>1.2.12</version>
+        <change>
+            <item>Replaced machine-generated Dutch nl-NL strings with a native review by Jip Jonker</item>
+            <item>Documented Dutch translation credit in docs/translations.md</item>
+        </change>
+        <fix>
+            <item>Removed duplicate COM_DEVARTPOLLS_RESPONSES from administrator .sys.ini so Participants and Survey Responses no longer collide</item>
+        </fix>
+        <note>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.2.11</item>
+            <item>No database schema changes; option IDs and vote counts are preserved</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
         <version>1.2.11</version>
         <fix>
             <item>Messages tab custom texts now save correctly using flat message_* form fields</item>

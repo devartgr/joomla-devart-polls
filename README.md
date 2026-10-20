@@ -4,7 +4,7 @@ Polls and surveys for Joomla 6, designed for production websites that need anony
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.11-orange)
+![Release](https://img.shields.io/badge/Version-1.2.12-orange)
 ![License](https://img.shields.io/badge/License-GPLv2%2B-red)
 
 ---
@@ -27,11 +27,34 @@ The extension is built for Joomla 6, PHP 8.3+, Full Page Cache, and Cloudflare-f
 
 ---
 
+## Version 1.2.12
+
+DevArt Polls 1.2.12 is the current stable release. It integrates a native Dutch
+(`nl-NL`) translation review by Jip Jonker and removes a colliding administrator
+language key for Survey Responses vs Participants.
+
+### Highlights
+
+- Native Dutch (`nl-NL`) review by Jip Jonker (peiling / enquête / “je”)
+- Administrator `.sys.ini` no longer overrides Participants with Survey Responses
+- Safe update from DevArt Polls 1.2.11
+
+### Requirements
+
+- Joomla 6.0+
+- PHP 8.3+
+
+### Safe update
+
+Safe update from DevArt Polls 1.2.11. No database schema changes.
+
+---
+
 ## Version 1.2.11
 
-DevArt Polls 1.2.11 is the current stable release. It fixes Messages tab custom
-text saving, the Survey Response Storage `counters_only` editor overwrite, and
-related low-risk correctness/security polish.
+DevArt Polls 1.2.11 fixed Messages tab custom text saving, the Survey Response
+Storage `counters_only` editor overwrite, and related low-risk
+correctness/security polish.
 
 ### Highlights
 
@@ -200,7 +223,7 @@ The component site output and frontend module include:
 - Brazilian Portuguese (`pt-BR`)
 - Greek (`el-GR`)
 - Czech (`cs-CZ`)
-- Dutch (`nl-NL`)
+- Dutch (`nl-NL`) — reviewed by Jip Jonker
 - Polish (`pl-PL`)
 - Russian (`ru-RU`)
 - Ukrainian (`uk-UA`)
@@ -218,7 +241,7 @@ The component site output and frontend module include:
 - Brazilian Portuguese (`pt-BR`)
 - Greek (`el-GR`)
 - Czech (`cs-CZ`)
-- Dutch (`nl-NL`)
+- Dutch (`nl-NL`) — reviewed by Jip Jonker
 - Polish (`pl-PL`)
 - Russian (`ru-RU`)
 - Ukrainian (`uk-UA`)
@@ -226,9 +249,10 @@ The component site output and frontend module include:
 - Turkish (`tr-TR`)
 - Chinese Simplified (`zh-CN`)
 
-Non-English translations (except French) were generated automatically and remain
-open to native-speaker review. Corrections and improvements are welcome through
-GitHub. See `docs/translations.md` for contributor credits and language status.
+Non-English translations (except French and Dutch) were generated automatically
+and remain open to native-speaker review. Corrections and improvements are
+welcome through GitHub. See `docs/translations.md` for contributor credits and
+language status.
 
 ---
 
