@@ -6,12 +6,12 @@
         <element>pkg_devartpolls</element>
         <type>package</type>
         <client>site</client>
-        <version>1.3.0</version>
+        <version>1.3.1</version>
         <infourl title="DevArt Polls">https://github.com/devartgr/joomla-devart-polls</infourl>
         <downloads>
-            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-polls/releases/download/v1.3.0/pkg_devartpolls_v1.3.0.zip</downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-polls/releases/download/v1.3.1/pkg_devartpolls_v1.3.1.zip</downloadurl>
         </downloads>
-        <sha256>8ffa3f6705c50a209a5a7224584623868072b8b6ba5b8f000664e33c4415e3d6</sha256>
+        <sha256>d2dba5e3d24fdf1ceff2225a25231ccc82aca75567d58286f882e5b66e16ede5</sha256>
         <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-polls/main/changelog.xml</changelogurl>
         <targetplatform name="joomla" version="6.*" />
         <php_minimum>8.3.0</php_minimum>

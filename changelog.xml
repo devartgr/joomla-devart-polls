@@ -3,6 +3,22 @@
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <version>1.3.1</version>
+        <addition>
+            <item>Administrator Results view with per-question vote totals and progress bars (independent of frontend Show Results)</item>
+            <item>Totals CSV export from the Results view (ACL: core.export or core.manage)</item>
+            <item>Results entry points from the Polls list and the poll edit toolbar</item>
+        </addition>
+        <note>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.3.0</item>
+            <item>SHA-256: d2dba5e3d24fdf1ceff2225a25231ccc82aca75567d58286f882e5b66e16ede5</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
         <version>1.3.0</version>
         <addition>
             <item>Dashboard Cloudflare Bypass guidance and on-demand vote JSON cache check (PASS/FAIL/INCONCLUSIVE)</item>
