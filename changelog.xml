@@ -3,6 +3,35 @@
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <version>1.3.0</version>
+        <addition>
+            <item>Dashboard Cloudflare Bypass guidance and on-demand vote JSON cache check (PASS/FAIL/INCONCLUSIVE)</item>
+            <item>SEF-aware Cloudflare Bypass expression and custom menu-alias checklist</item>
+            <item>Hardened verified-email OTP (atomic attempts, GET_LOCK send quotas, busy message, vote-fail refund)</item>
+            <item>Guest/Registered duplicate pairing and shared legacy duplicate-mode resolver</item>
+            <item>Article-backed answers with bounded picker; expanded frontend locales</item>
+            <item>Responses list performance improvements; media_version cache-busting; release metadata guard</item>
+        </addition>
+        <change>
+            <item>Cache-safe vote.refresh personal-state correction under FPC/CDN</item>
+            <item>Poll-row FOR UPDATE with post-lock revalidation; counter UPDATEs require published=1 and affected_rows=1</item>
+            <item>OTP GET_LOCK acquired before transaction; always released in finally</item>
+            <item>Reset Protection Locks blocked when survey answer history exists</item>
+        </change>
+        <fix>
+            <item>Stabilisation fixes from the private post-1.2.12 train (folded into this public release)</item>
+        </fix>
+        <note>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.2.12</item>
+            <item>Additive database updates for existing installations</item>
+            <item>SHA-256: 8ffa3f6705c50a209a5a7224584623868072b8b6ba5b8f000664e33c4415e3d6</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
         <version>1.2.12</version>
         <change>
             <item>Replaced machine-generated Dutch nl-NL strings with a native review by Jip Jonker</item>
