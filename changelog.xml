@@ -3,6 +3,23 @@
     <changelog>
         <element>pkg_devartpolls</element>
         <type>package</type>
+        <version>1.3.2</version>
+        <change>
+            <item>Native Dutch (nl-NL) update by Jip Jonker for 1.3.1 Results strings and remaining English leftovers from the 1.3.0 train</item>
+        </change>
+        <fix>
+            <item>Polls Trashed filter no longer shows duplicate Empty trash toolbar buttons</item>
+        </fix>
+        <note>
+            <item>Requires Joomla 6.0+ and PHP 8.3+</item>
+            <item>Install or update using the full pkg_devartpolls package only</item>
+            <item>Safe update from DevArt Polls 1.3.1</item>
+            <item>SHA-256: fc2282460ebb4d0a75aa946ac8d1bba704cb2eed2c3afe10990ee04bf39c622b</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>pkg_devartpolls</element>
+        <type>package</type>
         <version>1.3.1</version>
         <addition>
             <item>Administrator Results view with per-question vote totals and progress bars (independent of frontend Show Results)</item>

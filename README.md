@@ -4,7 +4,7 @@ Polls and surveys for Joomla 6, designed for production websites that need anony
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.3.1-orange)
+![Release](https://img.shields.io/badge/Version-1.3.2-orange)
 ![License](https://img.shields.io/badge/License-GPLv2%2B-red)
 
 ---
@@ -27,16 +27,25 @@ The extension is built for Joomla 6, PHP 8.3+, Full Page Cache, and Cloudflare-f
 
 ---
 
-## Version 1.3.1
+## Version 1.3.2
 
-Administrator Results view for poll and survey vote totals (independent of
-frontend Show Results), with totals CSV export and entry points from the Polls
-list and poll edit toolbar. Safe update from 1.3.0. See `CHANGELOG.md`.
+Native Dutch (`nl-NL`) update by Jip Jonker for the 1.3.1 Results strings and
+remaining English leftovers from the 1.3.0 train, plus a cosmetic fix for the
+duplicate Empty trash toolbar button in the Polls Trashed filter. Safe update
+from 1.3.1. See `CHANGELOG.md`.
 
 ### Requirements
 
 - Joomla 6.0+
 - PHP 8.3+
+
+---
+
+## Version 1.3.1
+
+Administrator Results view for poll and survey vote totals (independent of
+frontend Show Results), with totals CSV export and entry points from the Polls
+list and poll edit toolbar. Safe update from 1.3.0. See `CHANGELOG.md`.
 
 ---
 
